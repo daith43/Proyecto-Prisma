@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/prisma-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/contacto.css" />
+    <title>Contáctanos</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html">
+            <p>Pr<span class="I">i</span>sm<span class="A">A</span></p>
+          </a>
+        </div>
+        <div class="nav-items">
+          <label for="check">
+            <img src="iconos/menuWhite.svg" alt="" />
+          </label>
+          <input type="checkbox" name="check" id="check" />
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link">Inicio</a>
+            </li>
+            <li>
+              <a href="noticias.html" class="nav-link">Noticias</a>
+            </li>
+            <li>
+              <a href="recursos.html" class="nav-link">Recursos</a>
+            </li>
+            <li>
+              <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="social">
+          <label for="check2">
+            Social
+          </label>
+          <input type="checkbox" name="check2" id="check2">
+          <ul class="lista">
+            <li>
+              <a href="https://github.com/" target="blank">
+                <img src="iconos/github.svg"/><p>Github</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="blank">
+                <img src="iconos/instagram.svg"/><p>Instagram</p>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/?lang=es" target="blank">
+                <img src="iconos/x.svg"/><p>Twitter</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </nav>
+    <main>
+
+      <div class="container">
+        <form id="form" method="get">
+          
+          <div class="card front">
+            <div class="front-form">
+              <div style="text-align: center">
+                <h2 class="form-h2">Feedback (Opcional)</h2>
+              </div>
+              <table>
+                <tr>
+                  <td>
+                    <label for="nombre_opcional">Nombre:</label><br />
+                    <input
+                      type="text"
+                      id="nombre_opcional"
+                      name="nombre_opcional"
+                      autocomplete="off"
+                    />
+                  </td>
+                  <td>
+                    <label for="experiencia">Experiencia de Usuario:</label
+                    ><br />
+                    <select id="experiencia" name="experiencia">
+                      <option value="">Seleccionar</option>
+                      <option value="Buena">Buena</option>
+                      <option value="Regular">Regular</option>
+                      <option value="Mala">Mala</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="range-cont">
+                    <label for="votacion">¿Qué nota nos das?:</label><br />
+                    <input
+                      type="range"
+                      min="0"
+                      max="10"
+                      value="5"
+                      step="1"
+                      id="votacion"
+                      name="votacion"
+                      oninput="output.value = value"
+                    />
+                    <output id="output">5</output>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="mensajeFeed">Dinos algo para mejorar:</label
+                    ><br />
+                    <textarea
+                      id="mensajeFeed"
+                      name="mensajeFeed"
+                      cols="30"
+                      rows="5"
+                      style="resize: none"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <label for="fileUpload">Sube una imagen o archivo:</label
+                    ><br />
+                    <input
+                      type="file"
+                      id="fileUpload"
+                      name="fileUpload"
+                      accept="image/*, .pdf, .doc, .docx"
+                    />
+                  </td>
+                </tr>
+              </table>
+              <div class="siguiente">
+                <button class="btn">Siguiente</button>
+                <p>Dale a siguiente para pasar al formulario de contacto</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card back">
+            <div class="back-form">
+              <table>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    <h2 class="form-h2">Contáctanos</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="nombre"> <span class="red">*</span> Nombre:</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      autocomplete="off"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <label for="email"><span class="red">*</span>Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="off"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <label for="telefono">Teléfono:</label>
+                    <input
+                      type="number"
+                      id="telefono"
+                      name="telefono"
+                      autocomplete="off"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label for="ciudad">Ciudad de Residencia:</label>
+                    <input
+                      type="text"
+                      id="ciudad"
+                      name="ciudad"
+                      autocomplete="off"
+                    />
+                  </td>
+                  <td>
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais">
+                      <option value="" selected disabled>
+                        Seleccionar país
+                      </option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Brasil">Brasil</option>
+                      <option value="Chile">Chile</option>
+                      <option value="Colombia">Colombia</option>
+                      <option value="México">México</option>
+                      <option value="Perú">Perú</option>
+                      <option value="España">España</option>
+                      <option value="Estados Unidos">Estados Unidos</option>
+                      <option value="Otro">Otro</option>
+
+                    </select>
+                  </td>
+                  <td>
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                      <option value="" selected disabled>Seleccionar</option>
+                      <option value="consultoria">Consultoría</option>
+                      <option value="colaborar">
+                        Colaborar
+                      </option>
+                      <option value="otros">Otros</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <label for="mensaje">Mensaje o consulta:</label>
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      cols="30"
+                      rows="5"
+                      style="resize: none"
+                    ></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3">
+                    <label for="preferencia-contacto"
+                      ><span class="red">*</span>Preferencia de Contacto:</label
+                    >
+                    <div class="radio-group" style="text-align: center">
+                      <input
+                        type="radio"
+                        id="telefono"
+                        name="contacto"
+                        value="telefono"
+                        required
+                      />
+                      <label for="telefono">Teléfono</label>
+
+                      <input
+                        type="radio"
+                        id="correo"
+                        name="contacto"
+                        value="correo"
+                        required
+                      />
+                      <label for="correo">Email</label>
+
+                      <input
+                        type="radio"
+                        id="whatsapp"
+                        name="contacto"
+                        value="whatsapp"
+                        required
+                      />
+                      <label for="whatsapp">WhatsApp</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" class="td-terminos">
+                    <label for="terminos"
+                      ><span class="red">*</span>Acepto los Términos y Condiciones:</label
+                    >
+                    <input type="checkbox" id="terminos" name="terminos" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">
+                    <div class="enviar">
+                      <input type="submit" id="submit" value="Enviar" />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </form>
+
+        <div class="modal">
+          <p class="modal-p">Enviado correctamente!</p>
+        </div>
+      </div>
+    </main>
+    <script src="contacto.js"></script>
+  </body>
+</html>
